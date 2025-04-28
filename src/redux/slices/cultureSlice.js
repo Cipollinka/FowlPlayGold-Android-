@@ -16,7 +16,7 @@ const cultureSlice = createSlice({
                         id: nanoid(),
                         title,
                         sort,
-                        date,
+                        date :date.toString(),
                         stage,
                         note,
                         state: stateText,

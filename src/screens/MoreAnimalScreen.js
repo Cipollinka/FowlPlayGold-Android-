@@ -33,9 +33,6 @@ const MoreAnimalScreen = ({navigation, route}) => {
           <Text style={styles.label}>Animal</Text>
           <Text style={styles.value}>{item.selectedAnimal}</Text>
 
-          <Text style={styles.label}>Date</Text>
-          <Text style={styles.value}>{item.date}</Text>
-
           <Text style={styles.label}>Age</Text>
           <Text style={styles.value}>{item.age}</Text>
 

@@ -70,7 +70,6 @@ const AddMarkScreen = ({navigation, route}) => {
                         selectedAnimal,
                         numberOfAnimals,
                         age,
-                        date,
                         mark: selectedMark,
                     }));
                     navigation.pop(2);

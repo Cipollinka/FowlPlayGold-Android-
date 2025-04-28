@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {
     View,
     Text,
@@ -26,6 +26,10 @@ const AddAnimalScreen = ({navigation}) => {
         setShowDatePicker(Platform.OS === 'ios');
         setDate(currentDate);
     };
+
+    useEffect(() => {
+        const date = new Date().toLocaleDateString();
+    }, [])
 
     return (
         <ScrollView style={styles.container}>
@@ -70,22 +74,7 @@ const AddAnimalScreen = ({navigation}) => {
                 onChangeText={setNumberOfAnimals}
             />
 
-            <Text style={styles.label}>Date of Acquisition</Text>
-            <TouchableOpacity onPress={() => setShowDatePicker(true)} style={styles.input}>
-                <Text style={styles.dateText}>
-                    {date.toLocaleDateString()}
-                </Text>
-            </TouchableOpacity>
-
-            {showDatePicker && (
-                <DateTimePicker
-                    value={date}
-                    textColor="#fff" // для iOS
-                    mode="date"
-                    display="spinner"
-                    onChange={onChangeDate}
-                />
-            )}
+            <Text style={styles.label}>Age of Acquisition</Text>r
 
             <TextInput
                 style={styles.input}
